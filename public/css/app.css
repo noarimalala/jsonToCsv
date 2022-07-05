@@ -1,0 +1,19 @@
+.card {
+    margin: 40px auto auto auto;
+    width: 700px
+}
+
+.btn.btn-primary.team {
+    display: flex;
+    position: relative;
+    margin: 0 120px -25px 0px;
+}
+
+.btn.btn-primary.members {
+    display: inline-block;
+    margin: -67px 0 -47px 515px
+}
+
+.title {
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test PHP{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="title"> Test PHP </h1>
+                <h3> Consigne</h3>
+                <p> Former 2 deux CSV distincts, à partir du fichier sample_data_test.json en pièce-jointe :</p>
+                <ul>
+                    <li>
+                        teams.csv
+                    </li>
+                    <li> team_members.csv</li>
+                </ul>
+                <h3>Guide d'utilisation</h3>
+                <ul>
+                    <li>
+                        Respecter les en-têtes en annexe.
+                    </li>
+                    <li>
+                        Ne pas oublier d'utiliser le mapping pour remplir les colonnes PowerX''
+                    </li>
+                    <li>
+                        Un attention particulière sera portée sur la logique utilisé et la qualité du rendu.
+                    </li>
+                    <li>
+                        N'oubliez pas de TESTER le script avant de le retourner.
+                    </li>
+                    <li>
+                        Cliquer sur le bouton en bleu pour générer le fichier csv
+                    </li>
+                </ul>
+
+            </div>
+            <div class="card-body">
+                <form name="" action="{{ path ('app_teams_csv') }}">
+                    <input id="team" name="team" type="hidden" value="team">
+                    <button class="btn btn-primary team ">Teams</button>
+                </form>
+                <form name="" action="{{ path ('app_teams_csv') }}">
+                    <input id="members" name="members" type="hidden" value="members">
+                    <button class="btn btn-primary members">Team Members</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}
